@@ -25,7 +25,6 @@ Partial Class Form1
         Me.ButtonTake3 = New System.Windows.Forms.Button()
         Me.ButtonNew = New System.Windows.Forms.Button()
         Me.ListBoxLog = New System.Windows.Forms.ListBox()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Stone1 = New System.Windows.Forms.Label()
         Me.Stone2 = New System.Windows.Forms.Label()
         Me.Stone3 = New System.Windows.Forms.Label()
@@ -122,14 +121,6 @@ Partial Class Form1
         Me.ListBoxLog.Name = "ListBoxLog"
         Me.ListBoxLog.Size = New System.Drawing.Size(430, 184)
         Me.ListBoxLog.TabIndex = 7
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(16, 336)
-        Me.ProgressBar1.Maximum = 21
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(434, 24)
-        Me.ProgressBar1.TabIndex = 8
         '
         'Stone1
         '
@@ -346,7 +337,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Stone3)
         Me.Controls.Add(Me.Stone2)
         Me.Controls.Add(Me.Stone1)
-        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.ListBoxLog)
         Me.Controls.Add(Me.ButtonNew)
         Me.Controls.Add(Me.ButtonTake3)
@@ -372,7 +362,6 @@ Partial Class Form1
     Friend WithEvents ButtonTake3 As Button
     Friend WithEvents ButtonNew As Button
     Friend WithEvents ListBoxLog As ListBox
-    Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Stone1 As Label
     Friend WithEvents Stone2 As Label
     Friend WithEvents Stone3 As Label

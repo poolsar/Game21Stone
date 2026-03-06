@@ -31,9 +31,6 @@ Public Class Form1
 
     Private Sub UpdateGameView()
         LabelStones.Text = "Осталось камней: " & stones
-        ProgressBar1.Minimum = 0
-        ProgressBar1.Maximum = 21
-        ProgressBar1.Value = stones
 
         Dim i As Integer
         For i = 0 To stoneViews.Length - 1
