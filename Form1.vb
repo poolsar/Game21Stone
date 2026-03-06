@@ -1,51 +1,72 @@
 Public Class Form1
 
     Dim stones As Integer
-    Dim turnPlayer As Boolean
-    Dim stoneViews() As Control
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
-        stoneViews = New Control() {
-            Stone1, Stone2, Stone3, Stone4, Stone5, Stone6,
-            Stone7, Stone8, Stone9, Stone10, Stone11,
-            Stone12, Stone13, Stone14, Stone15,
-            Stone16, Stone17, Stone18,
-            Stone19, Stone20,
-            Stone21
-        }
+        stones = 21
         NewGame()
     End Sub
 
     Private Sub NewGame()
         stones = 21
-        turnPlayer = True
 
         ListBoxLog.Items.Clear()
-        SetPlayerButtonsEnabled(True)
-        ButtonNew.Enabled = True
+
+        ButtonTake1.Enabled = True
+        ButtonTake2.Enabled = True
+        ButtonTake3.Enabled = True
 
         LabelStatus.Text = "Ваш ход. Возьмите 1-3 камня."
-        UpdateGameView()
-    End Sub
-
-    Private Sub UpdateGameView()
         LabelStones.Text = "Осталось камней: " & stones
 
-        Dim i As Integer
-        For i = 0 To stoneViews.Length - 1
-            If i < stones Then
-                stoneViews(i).Visible = True
-            Else
-                stoneViews(i).Visible = False
-            End If
-        Next
+        ShowStones()
     End Sub
 
-    Private Sub SetPlayerButtonsEnabled(enabled As Boolean)
-        ButtonTake1.Enabled = enabled
-        ButtonTake2.Enabled = enabled
-        ButtonTake3.Enabled = enabled
+    Private Sub ShowStones()
+        Stone1.Visible = False
+        Stone2.Visible = False
+        Stone3.Visible = False
+        Stone4.Visible = False
+        Stone5.Visible = False
+        Stone6.Visible = False
+        Stone7.Visible = False
+        Stone8.Visible = False
+        Stone9.Visible = False
+        Stone10.Visible = False
+        Stone11.Visible = False
+        Stone12.Visible = False
+        Stone13.Visible = False
+        Stone14.Visible = False
+        Stone15.Visible = False
+        Stone16.Visible = False
+        Stone17.Visible = False
+        Stone18.Visible = False
+        Stone19.Visible = False
+        Stone20.Visible = False
+        Stone21.Visible = False
+
+        If stones >= 1 Then Stone1.Visible = True
+        If stones >= 2 Then Stone2.Visible = True
+        If stones >= 3 Then Stone3.Visible = True
+        If stones >= 4 Then Stone4.Visible = True
+        If stones >= 5 Then Stone5.Visible = True
+        If stones >= 6 Then Stone6.Visible = True
+        If stones >= 7 Then Stone7.Visible = True
+        If stones >= 8 Then Stone8.Visible = True
+        If stones >= 9 Then Stone9.Visible = True
+        If stones >= 10 Then Stone10.Visible = True
+        If stones >= 11 Then Stone11.Visible = True
+        If stones >= 12 Then Stone12.Visible = True
+        If stones >= 13 Then Stone13.Visible = True
+        If stones >= 14 Then Stone14.Visible = True
+        If stones >= 15 Then Stone15.Visible = True
+        If stones >= 16 Then Stone16.Visible = True
+        If stones >= 17 Then Stone17.Visible = True
+        If stones >= 18 Then Stone18.Visible = True
+        If stones >= 19 Then Stone19.Visible = True
+        If stones >= 20 Then Stone20.Visible = True
+        If stones >= 21 Then Stone21.Visible = True
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
@@ -53,69 +74,96 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonTake1_Click(sender As Object, e As EventArgs) Handles ButtonTake1.Click
-        PlayerTake(1)
+        If stones < 1 Then
+            LabelStatus.Text = "Нельзя взять столько."
+            Exit Sub
+        End If
+
+        stones = stones - 1
+        ListBoxLog.Items.Add("Игрок взял: 1, осталось: " & stones)
+        LabelStones.Text = "Осталось камней: " & stones
+        ShowStones()
+
+        If stones = 0 Then
+            LabelStatus.Text = "Вы проиграли. Вы взяли последний камень."
+            ButtonTake1.Enabled = False
+            ButtonTake2.Enabled = False
+            ButtonTake3.Enabled = False
+            Exit Sub
+        End If
+
+        ComputerTurn()
     End Sub
 
     Private Sub ButtonTake2_Click(sender As Object, e As EventArgs) Handles ButtonTake2.Click
-        PlayerTake(2)
+        If stones < 2 Then
+            LabelStatus.Text = "Нельзя взять столько."
+            Exit Sub
+        End If
+
+        stones = stones - 2
+        ListBoxLog.Items.Add("Игрок взял: 2, осталось: " & stones)
+        LabelStones.Text = "Осталось камней: " & stones
+        ShowStones()
+
+        If stones = 0 Then
+            LabelStatus.Text = "Вы проиграли. Вы взяли последний камень."
+            ButtonTake1.Enabled = False
+            ButtonTake2.Enabled = False
+            ButtonTake3.Enabled = False
+            Exit Sub
+        End If
+
+        ComputerTurn()
     End Sub
 
     Private Sub ButtonTake3_Click(sender As Object, e As EventArgs) Handles ButtonTake3.Click
-        PlayerTake(3)
-    End Sub
-
-    Private Sub PlayerTake(take As Integer)
-        If Not turnPlayer Then
-            Return
+        If stones < 3 Then
+            LabelStatus.Text = "Нельзя взять столько."
+            Exit Sub
         End If
 
-        If take < 1 OrElse take > 3 OrElse take > stones Then
-            LabelStatus.Text = "Неверный ход. Нельзя взять больше оставшихся камней."
-            Return
-        End If
-
-        stones -= take
-        ListBoxLog.Items.Add("Игрок взял: " & take & ", осталось: " & stones)
-        UpdateGameView()
+        stones = stones - 3
+        ListBoxLog.Items.Add("Игрок взял: 3, осталось: " & stones)
+        LabelStones.Text = "Осталось камней: " & stones
+        ShowStones()
 
         If stones = 0 Then
-            EndGame("Вы проиграли. Вы взяли последний камень.")
-            Return
+            LabelStatus.Text = "Вы проиграли. Вы взяли последний камень."
+            ButtonTake1.Enabled = False
+            ButtonTake2.Enabled = False
+            ButtonTake3.Enabled = False
+            Exit Sub
         End If
 
-        turnPlayer = False
-        LabelStatus.Text = "Ход компьютера..."
         ComputerTurn()
     End Sub
 
     Private Sub ComputerTurn()
-        Dim take As Integer = (stones - 1) Mod 4
+        Dim take As Integer
 
-        If take < 1 OrElse take > 3 Then
-            take = CInt(Int(Rnd() * 3)) + 1
-        End If
+        LabelStatus.Text = "Ход компьютера..."
 
-        While take < 1 OrElse take > 3 OrElse take > stones
-            take = CInt(Int(Rnd() * 3)) + 1
+        take = Int(Rnd() * 3) + 1
+
+        While take > stones
+            take = Int(Rnd() * 3) + 1
         End While
 
-        stones -= take
+        stones = stones - take
         ListBoxLog.Items.Add("Компьютер взял: " & take & ", осталось: " & stones)
-        UpdateGameView()
+        LabelStones.Text = "Осталось камней: " & stones
+        ShowStones()
 
         If stones = 0 Then
-            EndGame("Вы выиграли. Компьютер взял последний камень.")
-            Return
+            LabelStatus.Text = "Вы выиграли. Компьютер взял последний камень."
+            ButtonTake1.Enabled = False
+            ButtonTake2.Enabled = False
+            ButtonTake3.Enabled = False
+            Exit Sub
         End If
 
-        turnPlayer = True
         LabelStatus.Text = "Ваш ход. Возьмите 1-3 камня."
-    End Sub
-
-    Private Sub EndGame(message As String)
-        LabelStatus.Text = message
-        SetPlayerButtonsEnabled(False)
-        turnPlayer = False
     End Sub
 
 End Class
