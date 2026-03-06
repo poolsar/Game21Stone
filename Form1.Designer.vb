@@ -2,7 +2,6 @@
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(disposing As Boolean)
         Try
@@ -14,19 +13,16 @@ Partial Class Form1
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.
-    'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.LabelTitle = New System.Windows.Forms.Label()
         Me.LabelStones = New System.Windows.Forms.Label()
         Me.LabelStatus = New System.Windows.Forms.Label()
-        Me.TextBoxTake = New System.Windows.Forms.TextBox()
-        Me.ButtonTake = New System.Windows.Forms.Button()
+        Me.ButtonTake1 = New System.Windows.Forms.Button()
+        Me.ButtonTake2 = New System.Windows.Forms.Button()
+        Me.ButtonTake3 = New System.Windows.Forms.Button()
         Me.ButtonNew = New System.Windows.Forms.Button()
         Me.ListBoxLog = New System.Windows.Forms.ListBox()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
@@ -61,28 +57,39 @@ Partial Class Form1
         Me.LabelStatus.TabIndex = 2
         Me.LabelStatus.Text = "Ваш ход. Возьмите 1-3 камня."
         '
-        'TextBoxTake
+        'ButtonTake1
         '
-        Me.TextBoxTake.Location = New System.Drawing.Point(20, 89)
-        Me.TextBoxTake.Name = "TextBoxTake"
-        Me.TextBoxTake.Size = New System.Drawing.Size(100, 23)
-        Me.TextBoxTake.TabIndex = 3
+        Me.ButtonTake1.Location = New System.Drawing.Point(20, 88)
+        Me.ButtonTake1.Name = "ButtonTake1"
+        Me.ButtonTake1.Size = New System.Drawing.Size(75, 25)
+        Me.ButtonTake1.TabIndex = 3
+        Me.ButtonTake1.Text = "Взять 1"
+        Me.ButtonTake1.UseVisualStyleBackColor = True
         '
-        'ButtonTake
+        'ButtonTake2
         '
-        Me.ButtonTake.Location = New System.Drawing.Point(134, 88)
-        Me.ButtonTake.Name = "ButtonTake"
-        Me.ButtonTake.Size = New System.Drawing.Size(90, 25)
-        Me.ButtonTake.TabIndex = 4
-        Me.ButtonTake.Text = "Взять"
-        Me.ButtonTake.UseVisualStyleBackColor = True
+        Me.ButtonTake2.Location = New System.Drawing.Point(101, 88)
+        Me.ButtonTake2.Name = "ButtonTake2"
+        Me.ButtonTake2.Size = New System.Drawing.Size(75, 25)
+        Me.ButtonTake2.TabIndex = 4
+        Me.ButtonTake2.Text = "Взять 2"
+        Me.ButtonTake2.UseVisualStyleBackColor = True
+        '
+        'ButtonTake3
+        '
+        Me.ButtonTake3.Location = New System.Drawing.Point(182, 88)
+        Me.ButtonTake3.Name = "ButtonTake3"
+        Me.ButtonTake3.Size = New System.Drawing.Size(75, 25)
+        Me.ButtonTake3.TabIndex = 5
+        Me.ButtonTake3.Text = "Взять 3"
+        Me.ButtonTake3.UseVisualStyleBackColor = True
         '
         'ButtonNew
         '
-        Me.ButtonNew.Location = New System.Drawing.Point(230, 88)
+        Me.ButtonNew.Location = New System.Drawing.Point(263, 88)
         Me.ButtonNew.Name = "ButtonNew"
         Me.ButtonNew.Size = New System.Drawing.Size(100, 25)
-        Me.ButtonNew.TabIndex = 5
+        Me.ButtonNew.TabIndex = 6
         Me.ButtonNew.Text = "Новая игра"
         Me.ButtonNew.UseVisualStyleBackColor = True
         '
@@ -93,7 +100,7 @@ Partial Class Form1
         Me.ListBoxLog.Location = New System.Drawing.Point(20, 146)
         Me.ListBoxLog.Name = "ListBoxLog"
         Me.ListBoxLog.Size = New System.Drawing.Size(430, 184)
-        Me.ListBoxLog.TabIndex = 6
+        Me.ListBoxLog.TabIndex = 7
         '
         'ProgressBar1
         '
@@ -101,7 +108,7 @@ Partial Class Form1
         Me.ProgressBar1.Maximum = 21
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(434, 24)
-        Me.ProgressBar1.TabIndex = 7
+        Me.ProgressBar1.TabIndex = 8
         '
         'Form1
         '
@@ -111,8 +118,9 @@ Partial Class Form1
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.ListBoxLog)
         Me.Controls.Add(Me.ButtonNew)
-        Me.Controls.Add(Me.ButtonTake)
-        Me.Controls.Add(Me.TextBoxTake)
+        Me.Controls.Add(Me.ButtonTake3)
+        Me.Controls.Add(Me.ButtonTake2)
+        Me.Controls.Add(Me.ButtonTake1)
         Me.Controls.Add(Me.LabelStatus)
         Me.Controls.Add(Me.LabelStones)
         Me.Controls.Add(Me.LabelTitle)
@@ -128,8 +136,9 @@ Partial Class Form1
     Friend WithEvents LabelTitle As Label
     Friend WithEvents LabelStones As Label
     Friend WithEvents LabelStatus As Label
-    Friend WithEvents TextBoxTake As TextBox
-    Friend WithEvents ButtonTake As Button
+    Friend WithEvents ButtonTake1 As Button
+    Friend WithEvents ButtonTake2 As Button
+    Friend WithEvents ButtonTake3 As Button
     Friend WithEvents ButtonNew As Button
     Friend WithEvents ListBoxLog As ListBox
     Friend WithEvents ProgressBar1 As ProgressBar

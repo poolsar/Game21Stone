@@ -13,14 +13,11 @@ Public Class Form1
         turnPlayer = True
 
         ListBoxLog.Items.Clear()
-        TextBoxTake.Text = ""
-        TextBoxTake.Enabled = True
-        ButtonTake.Enabled = True
+        SetPlayerButtonsEnabled(True)
         ButtonNew.Enabled = True
 
         LabelStatus.Text = "Ваш ход. Возьмите 1-3 камня."
         UpdateGameView()
-        TextBoxTake.Focus()
     End Sub
 
     Private Sub UpdateGameView()
@@ -30,38 +27,37 @@ Public Class Form1
         ProgressBar1.Value = stones
     End Sub
 
+    Private Sub SetPlayerButtonsEnabled(enabled As Boolean)
+        ButtonTake1.Enabled = enabled
+        ButtonTake2.Enabled = enabled
+        ButtonTake3.Enabled = enabled
+    End Sub
+
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
         NewGame()
     End Sub
 
-    Private Sub ButtonTake_Click(sender As Object, e As EventArgs) Handles ButtonTake.Click
+    Private Sub ButtonTake1_Click(sender As Object, e As EventArgs) Handles ButtonTake1.Click
+        PlayerTake(1)
+    End Sub
+
+    Private Sub ButtonTake2_Click(sender As Object, e As EventArgs) Handles ButtonTake2.Click
+        PlayerTake(2)
+    End Sub
+
+    Private Sub ButtonTake3_Click(sender As Object, e As EventArgs) Handles ButtonTake3.Click
+        PlayerTake(3)
+    End Sub
+
+    Private Sub PlayerTake(take As Integer)
         If Not turnPlayer Then
             Return
         End If
 
-        Dim inputText As String = TextBoxTake.Text
-        Dim take As Integer
-        Dim valid As Boolean = False
-
-        ' While loop for player input validation.
-        While Not valid
-            If Integer.TryParse(inputText, take) Then
-                If take >= 1 AndAlso take <= 3 AndAlso take <= stones Then
-                    valid = True
-                End If
-            End If
-
-            If Not valid Then
-                LabelStatus.Text = "Неверный ввод. Введите число от 1 до 3 (не больше остатка)."
-                inputText = InputBox("Введите число от 1 до 3 (и не больше остатка камней).", "Камни 21", inputText)
-                If inputText = "" Then
-                    TextBoxTake.Focus()
-                    TextBoxTake.SelectAll()
-                    Exit Sub
-                End If
-                TextBoxTake.Text = inputText
-            End If
-        End While
+        If take < 1 OrElse take > 3 OrElse take > stones Then
+            LabelStatus.Text = "Неверный ход. Нельзя взять больше оставшихся камней."
+            Return
+        End If
 
         stones -= take
         ListBoxLog.Items.Add("Игрок взял: " & take & ", осталось: " & stones)
@@ -84,7 +80,6 @@ Public Class Form1
             take = CInt(Int(Rnd() * 3)) + 1
         End If
 
-        ' While loop for computer move validation.
         While take < 1 OrElse take > 3 OrElse take > stones
             take = CInt(Int(Rnd() * 3)) + 1
         End While
@@ -100,14 +95,11 @@ Public Class Form1
 
         turnPlayer = True
         LabelStatus.Text = "Ваш ход. Возьмите 1-3 камня."
-        TextBoxTake.Text = ""
-        TextBoxTake.Focus()
     End Sub
 
     Private Sub EndGame(message As String)
         LabelStatus.Text = message
-        ButtonTake.Enabled = False
-        TextBoxTake.Enabled = False
+        SetPlayerButtonsEnabled(False)
         turnPlayer = False
     End Sub
 
