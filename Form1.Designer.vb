@@ -26,6 +26,27 @@ Partial Class Form1
         Me.ButtonNew = New System.Windows.Forms.Button()
         Me.ListBoxLog = New System.Windows.Forms.ListBox()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Stone1 = New System.Windows.Forms.Label()
+        Me.Stone2 = New System.Windows.Forms.Label()
+        Me.Stone3 = New System.Windows.Forms.Label()
+        Me.Stone4 = New System.Windows.Forms.Label()
+        Me.Stone5 = New System.Windows.Forms.Label()
+        Me.Stone6 = New System.Windows.Forms.Label()
+        Me.Stone7 = New System.Windows.Forms.Label()
+        Me.Stone8 = New System.Windows.Forms.Label()
+        Me.Stone9 = New System.Windows.Forms.Label()
+        Me.Stone10 = New System.Windows.Forms.Label()
+        Me.Stone11 = New System.Windows.Forms.Label()
+        Me.Stone12 = New System.Windows.Forms.Label()
+        Me.Stone13 = New System.Windows.Forms.Label()
+        Me.Stone14 = New System.Windows.Forms.Label()
+        Me.Stone15 = New System.Windows.Forms.Label()
+        Me.Stone16 = New System.Windows.Forms.Label()
+        Me.Stone17 = New System.Windows.Forms.Label()
+        Me.Stone18 = New System.Windows.Forms.Label()
+        Me.Stone19 = New System.Windows.Forms.Label()
+        Me.Stone20 = New System.Windows.Forms.Label()
+        Me.Stone21 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LabelTitle
@@ -110,11 +131,221 @@ Partial Class Form1
         Me.ProgressBar1.Size = New System.Drawing.Size(434, 24)
         Me.ProgressBar1.TabIndex = 8
         '
+        'Stone1
+        '
+        Me.Stone1.BackColor = System.Drawing.Color.Silver
+        Me.Stone1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone1.Location = New System.Drawing.Point(486, 300)
+        Me.Stone1.Name = "Stone1"
+        Me.Stone1.Size = New System.Drawing.Size(32, 22)
+        Me.Stone1.TabIndex = 9
+        '
+        'Stone2
+        '
+        Me.Stone2.BackColor = System.Drawing.Color.Silver
+        Me.Stone2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone2.Location = New System.Drawing.Point(522, 300)
+        Me.Stone2.Name = "Stone2"
+        Me.Stone2.Size = New System.Drawing.Size(32, 22)
+        Me.Stone2.TabIndex = 10
+        '
+        'Stone3
+        '
+        Me.Stone3.BackColor = System.Drawing.Color.Silver
+        Me.Stone3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone3.Location = New System.Drawing.Point(558, 300)
+        Me.Stone3.Name = "Stone3"
+        Me.Stone3.Size = New System.Drawing.Size(32, 22)
+        Me.Stone3.TabIndex = 11
+        '
+        'Stone4
+        '
+        Me.Stone4.BackColor = System.Drawing.Color.Silver
+        Me.Stone4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone4.Location = New System.Drawing.Point(594, 300)
+        Me.Stone4.Name = "Stone4"
+        Me.Stone4.Size = New System.Drawing.Size(32, 22)
+        Me.Stone4.TabIndex = 12
+        '
+        'Stone5
+        '
+        Me.Stone5.BackColor = System.Drawing.Color.Silver
+        Me.Stone5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone5.Location = New System.Drawing.Point(630, 300)
+        Me.Stone5.Name = "Stone5"
+        Me.Stone5.Size = New System.Drawing.Size(32, 22)
+        Me.Stone5.TabIndex = 13
+        '
+        'Stone6
+        '
+        Me.Stone6.BackColor = System.Drawing.Color.Silver
+        Me.Stone6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone6.Location = New System.Drawing.Point(666, 300)
+        Me.Stone6.Name = "Stone6"
+        Me.Stone6.Size = New System.Drawing.Size(32, 22)
+        Me.Stone6.TabIndex = 14
+        '
+        'Stone7
+        '
+        Me.Stone7.BackColor = System.Drawing.Color.Silver
+        Me.Stone7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone7.Location = New System.Drawing.Point(504, 270)
+        Me.Stone7.Name = "Stone7"
+        Me.Stone7.Size = New System.Drawing.Size(32, 22)
+        Me.Stone7.TabIndex = 15
+        '
+        'Stone8
+        '
+        Me.Stone8.BackColor = System.Drawing.Color.Silver
+        Me.Stone8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone8.Location = New System.Drawing.Point(540, 270)
+        Me.Stone8.Name = "Stone8"
+        Me.Stone8.Size = New System.Drawing.Size(32, 22)
+        Me.Stone8.TabIndex = 16
+        '
+        'Stone9
+        '
+        Me.Stone9.BackColor = System.Drawing.Color.Silver
+        Me.Stone9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone9.Location = New System.Drawing.Point(576, 270)
+        Me.Stone9.Name = "Stone9"
+        Me.Stone9.Size = New System.Drawing.Size(32, 22)
+        Me.Stone9.TabIndex = 17
+        '
+        'Stone10
+        '
+        Me.Stone10.BackColor = System.Drawing.Color.Silver
+        Me.Stone10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone10.Location = New System.Drawing.Point(612, 270)
+        Me.Stone10.Name = "Stone10"
+        Me.Stone10.Size = New System.Drawing.Size(32, 22)
+        Me.Stone10.TabIndex = 18
+        '
+        'Stone11
+        '
+        Me.Stone11.BackColor = System.Drawing.Color.Silver
+        Me.Stone11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone11.Location = New System.Drawing.Point(648, 270)
+        Me.Stone11.Name = "Stone11"
+        Me.Stone11.Size = New System.Drawing.Size(32, 22)
+        Me.Stone11.TabIndex = 19
+        '
+        'Stone12
+        '
+        Me.Stone12.BackColor = System.Drawing.Color.Silver
+        Me.Stone12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone12.Location = New System.Drawing.Point(522, 240)
+        Me.Stone12.Name = "Stone12"
+        Me.Stone12.Size = New System.Drawing.Size(32, 22)
+        Me.Stone12.TabIndex = 20
+        '
+        'Stone13
+        '
+        Me.Stone13.BackColor = System.Drawing.Color.Silver
+        Me.Stone13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone13.Location = New System.Drawing.Point(558, 240)
+        Me.Stone13.Name = "Stone13"
+        Me.Stone13.Size = New System.Drawing.Size(32, 22)
+        Me.Stone13.TabIndex = 21
+        '
+        'Stone14
+        '
+        Me.Stone14.BackColor = System.Drawing.Color.Silver
+        Me.Stone14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone14.Location = New System.Drawing.Point(594, 240)
+        Me.Stone14.Name = "Stone14"
+        Me.Stone14.Size = New System.Drawing.Size(32, 22)
+        Me.Stone14.TabIndex = 22
+        '
+        'Stone15
+        '
+        Me.Stone15.BackColor = System.Drawing.Color.Silver
+        Me.Stone15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone15.Location = New System.Drawing.Point(630, 240)
+        Me.Stone15.Name = "Stone15"
+        Me.Stone15.Size = New System.Drawing.Size(32, 22)
+        Me.Stone15.TabIndex = 23
+        '
+        'Stone16
+        '
+        Me.Stone16.BackColor = System.Drawing.Color.Silver
+        Me.Stone16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone16.Location = New System.Drawing.Point(540, 210)
+        Me.Stone16.Name = "Stone16"
+        Me.Stone16.Size = New System.Drawing.Size(32, 22)
+        Me.Stone16.TabIndex = 24
+        '
+        'Stone17
+        '
+        Me.Stone17.BackColor = System.Drawing.Color.Silver
+        Me.Stone17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone17.Location = New System.Drawing.Point(576, 210)
+        Me.Stone17.Name = "Stone17"
+        Me.Stone17.Size = New System.Drawing.Size(32, 22)
+        Me.Stone17.TabIndex = 25
+        '
+        'Stone18
+        '
+        Me.Stone18.BackColor = System.Drawing.Color.Silver
+        Me.Stone18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone18.Location = New System.Drawing.Point(612, 210)
+        Me.Stone18.Name = "Stone18"
+        Me.Stone18.Size = New System.Drawing.Size(32, 22)
+        Me.Stone18.TabIndex = 26
+        '
+        'Stone19
+        '
+        Me.Stone19.BackColor = System.Drawing.Color.Silver
+        Me.Stone19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone19.Location = New System.Drawing.Point(558, 180)
+        Me.Stone19.Name = "Stone19"
+        Me.Stone19.Size = New System.Drawing.Size(32, 22)
+        Me.Stone19.TabIndex = 27
+        '
+        'Stone20
+        '
+        Me.Stone20.BackColor = System.Drawing.Color.Silver
+        Me.Stone20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone20.Location = New System.Drawing.Point(594, 180)
+        Me.Stone20.Name = "Stone20"
+        Me.Stone20.Size = New System.Drawing.Size(32, 22)
+        Me.Stone20.TabIndex = 28
+        '
+        'Stone21
+        '
+        Me.Stone21.BackColor = System.Drawing.Color.Silver
+        Me.Stone21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Stone21.Location = New System.Drawing.Point(576, 150)
+        Me.Stone21.Name = "Stone21"
+        Me.Stone21.Size = New System.Drawing.Size(32, 22)
+        Me.Stone21.TabIndex = 29
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(470, 380)
+        Me.ClientSize = New System.Drawing.Size(724, 380)
+        Me.Controls.Add(Me.Stone21)
+        Me.Controls.Add(Me.Stone20)
+        Me.Controls.Add(Me.Stone19)
+        Me.Controls.Add(Me.Stone18)
+        Me.Controls.Add(Me.Stone17)
+        Me.Controls.Add(Me.Stone16)
+        Me.Controls.Add(Me.Stone15)
+        Me.Controls.Add(Me.Stone14)
+        Me.Controls.Add(Me.Stone13)
+        Me.Controls.Add(Me.Stone12)
+        Me.Controls.Add(Me.Stone11)
+        Me.Controls.Add(Me.Stone10)
+        Me.Controls.Add(Me.Stone9)
+        Me.Controls.Add(Me.Stone8)
+        Me.Controls.Add(Me.Stone7)
+        Me.Controls.Add(Me.Stone6)
+        Me.Controls.Add(Me.Stone5)
+        Me.Controls.Add(Me.Stone4)
+        Me.Controls.Add(Me.Stone3)
+        Me.Controls.Add(Me.Stone2)
+        Me.Controls.Add(Me.Stone1)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.ListBoxLog)
         Me.Controls.Add(Me.ButtonNew)
@@ -142,4 +373,25 @@ Partial Class Form1
     Friend WithEvents ButtonNew As Button
     Friend WithEvents ListBoxLog As ListBox
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Stone1 As Label
+    Friend WithEvents Stone2 As Label
+    Friend WithEvents Stone3 As Label
+    Friend WithEvents Stone4 As Label
+    Friend WithEvents Stone5 As Label
+    Friend WithEvents Stone6 As Label
+    Friend WithEvents Stone7 As Label
+    Friend WithEvents Stone8 As Label
+    Friend WithEvents Stone9 As Label
+    Friend WithEvents Stone10 As Label
+    Friend WithEvents Stone11 As Label
+    Friend WithEvents Stone12 As Label
+    Friend WithEvents Stone13 As Label
+    Friend WithEvents Stone14 As Label
+    Friend WithEvents Stone15 As Label
+    Friend WithEvents Stone16 As Label
+    Friend WithEvents Stone17 As Label
+    Friend WithEvents Stone18 As Label
+    Friend WithEvents Stone19 As Label
+    Friend WithEvents Stone20 As Label
+    Friend WithEvents Stone21 As Label
 End Class

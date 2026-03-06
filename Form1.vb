@@ -2,9 +2,18 @@ Public Class Form1
 
     Dim stones As Integer
     Dim turnPlayer As Boolean
+    Dim stoneViews() As Control
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
+        stoneViews = New Control() {
+            Stone1, Stone2, Stone3, Stone4, Stone5, Stone6,
+            Stone7, Stone8, Stone9, Stone10, Stone11,
+            Stone12, Stone13, Stone14, Stone15,
+            Stone16, Stone17, Stone18,
+            Stone19, Stone20,
+            Stone21
+        }
         NewGame()
     End Sub
 
@@ -25,6 +34,15 @@ Public Class Form1
         ProgressBar1.Minimum = 0
         ProgressBar1.Maximum = 21
         ProgressBar1.Value = stones
+
+        Dim i As Integer
+        For i = 0 To stoneViews.Length - 1
+            If i < stones Then
+                stoneViews(i).Visible = True
+            Else
+                stoneViews(i).Visible = False
+            End If
+        Next
     End Sub
 
     Private Sub SetPlayerButtonsEnabled(enabled As Boolean)
@@ -64,7 +82,7 @@ Public Class Form1
         UpdateGameView()
 
         If stones = 0 Then
-            EndGame("Вы выиграли")
+            EndGame("Вы проиграли. Вы взяли последний камень.")
             Return
         End If
 
@@ -89,7 +107,7 @@ Public Class Form1
         UpdateGameView()
 
         If stones = 0 Then
-            EndGame("Вы проиграли")
+            EndGame("Вы выиграли. Компьютер взял последний камень.")
             Return
         End If
 
